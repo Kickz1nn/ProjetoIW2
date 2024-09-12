@@ -1,25 +1,25 @@
+CREATE DATABASE ipi_2
+   CHARACTER SET utf8mb4
+   COLLATE utf8mb4_general_ci;
 
-CREATE DATABASE ipi_2,
+USE ipi_2;
 
-USE ipi_2,
-
-CREATE TABLE usuarios(
-
-   Id_Cadastro INT PRIMARY KEY AUTO_INCREMENT ,
-   CEP VARCHAR(10) NOT NULL,
-   Rua VARCHAR (100) NOT NULL,
-   Numero VARCHAR(4) NOT NULL,
-   Comp VARCHAR(60) NOT NULL,
-   Bairro VARCHAR(100) NOT NULL,
-   Cidade VARCHAR(100) NOT NULL,
-   UF CHAR(2) NOT NULL,
-   Nome varchar(50) NOT NULL,
-   DataNasc date NOT NULL,
-   Email varchar(50) NOT NULL,
-   Celular varchar(11) NOT NULL,
-   Assunto varchar(30) NOT NULL,
-   Mensagem varchar(125) NOT NULL,
-   Senha varchar NOT NULL,
-   CPF varchar(11) NOT NULL,
-   RG varchar(9) NOT NULL
+CREATE TABLE usuarios (
+   Id_Cadastro INT PRIMARY KEY AUTO_INCREMENT,
+   CEP VARCHAR(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+   Rua VARCHAR(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+   Numero VARCHAR(4) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+   Comp VARCHAR(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+   Bairro VARCHAR(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+   Cidade VARCHAR(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+   UF CHAR(2) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+   Nome VARCHAR(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+   DataNasc DATE NOT NULL,
+   Email VARCHAR(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+   Celular VARCHAR(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+   Assunto VARCHAR(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+   Mensagem VARCHAR(125) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+   Senha VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+   CPF VARCHAR(14) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+   RG VARCHAR(12) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL
 );
