@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo com jQuery e jQuery UI</title>
+    <!-- Incluindo CSS do jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <!-- Incluindo jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Incluindo jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #dialog {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de jQuery e jQuery UI</h1>
+    
+    <button id="openDialog">Abrir Diálogo</button>
+    <div id="dialog" title="Diálogo Exemplo">
+        <p>Bem-vindo ao exemplo de uso do jQuery UI!</p>
+    </div>
+
+    <h2>Controle Deslizante</h2>
+    <div id="slider" style="width: 300px;"></div>
+    <p>Valor selecionado: <span id="sliderValue">0</span></p>
+
+    <h2>Calendário</h2>
+    <input type="text" id="datepicker" placeholder="Escolha uma data">
+
+    <script>
+        $(document).ready(function() {
+            // Inicializando o diálogo
+            $("#dialog").dialog({
+                autoOpen: false,
+                modal: true,
+                buttons: {
+                    "Fechar": function() {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+
+            // Botão para abrir o diálogo
+            $("#openDialog").click(function() {
+                $("#dialog").dialog("open");
+            });
+
+            // Inicializando o controle deslizante
+            $("#slider").slider({
+                min: 0,
+                max: 100,
+                value: 0,
+                slide: function(event, ui) {
+                    $("#sliderValue").text(ui.value);
+                }
+            });
+
+            // Inicializando o calendário
+            $("#datepicker").datepicker();
+        });
+    </script>
+</body>
+</html>
